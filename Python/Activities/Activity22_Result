@@ -1,0 +1,151 @@
+PS C:\Users\0028TL744\IdeaProjects\FST_PYTHON> pytest -m activity1
+================================================================================= test session starts =================================================================================
+platform win32 -- Python 3.11.2, pytest-7.3.2, pluggy-1.0.0
+rootdir: C:\Users\0028TL744\IdeaProjects\FST_PYTHON
+plugins: html-3.2.0, metadata-3.0.0, xdist-3.3.1
+collected 31 items / 29 deselected / 2 selected
+
+activities\Activity22_test.py ..                                                                                                                                                 [100%]
+
+================================================================================== warnings summary ===================================================================================
+activities\Activity22_test.py:16
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\activities\Activity22_test.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.activity1 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity1
+
+activities\Activity22_test.py:23
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\activities\Activity22_test.py:23: PytestUnknownMarkWarning: Unknown pytest.mark.activity1 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity1
+
+tests\marker_test.py:4
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:4: PytestUnknownMarkWarning: Unknown pytest.mark.testing - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.testing
+
+tests\marker_test.py:10
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:10: PytestUnknownMarkWarning: Unknown pytest.mark.testing - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.testing
+
+tests\marker_test.py:16
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.testing1 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.testing1
+
+tests\marker_test.py:22
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:22: PytestUnknownMarkWarning: Unknown pytest.mark.activity - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity
+
+tests\marker_test.py:28
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:28: PytestUnknownMarkWarning: Unknown pytest.mark.activity - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================================================== 2 passed, 29 deselected, 7 warnings in 0.05s =====================================================================
+PS C:\Users\0028TL744\IdeaProjects\FST_PYTHON> pytest -k test
+================================================================================= test session starts =================================================================================
+platform win32 -- Python 3.11.2, pytest-7.3.2, pluggy-1.0.0
+rootdir: C:\Users\0028TL744\IdeaProjects\FST_PYTHON
+plugins: html-3.2.0, metadata-3.0.0, xdist-3.3.1
+collected 31 items
+
+activities\Activity21_test.py ....                                                                                                                                               [ 12%]
+activities\Activity22_test.py ....                                                                                                                                               [ 25%]
+tests\calculator_test.py .F..                                                                                                                                                    [ 38%]
+tests\compare_test.py ...                                                                                                                                                        [ 48%]
+tests\comparesum_test.py .                                                                                                                                                       [ 51%]
+tests\first_test.py .FF.                                                                                                                                                         [ 64%]
+tests\fixture_test.py F                                                                                                                                                          [ 67%]
+tests\marker_test.py ..F.F                                                                                                                                                       [ 83%]
+tests\test_multiplication.py ...                                                                                                                                                 [ 93%]
+tests\test_para.py ..                                                                                                                                                            [100%]
+
+====================================================================================== FAILURES =======================================================================================
+___________________________________________________________________________________ testsubtraction ___________________________________________________________________________________
+
+    def testsubtraction():
+        num1 = 10
+        num2 = 5
+>       assert num1-num2 == 2
+E       assert (10 - 5) == 2
+
+tests\calculator_test.py:11: AssertionError
+_____________________________________________________________________________________ testsquare ______________________________________________________________________________________
+
+    def testsquare():
+        num = 7
+>       assert num*num == 40
+E       assert (7 * 7) == 40
+
+tests\first_test.py:12: AssertionError
+____________________________________________________________________________________ testequality _____________________________________________________________________________________
+
+    def testequality():
+>       assert 10 == 11
+E       assert 10 == 11
+
+tests\first_test.py:16: AssertionError
+______________________________________________________________________________________ test_sum _______________________________________________________________________________________
+
+input_value = 20
+
+    def test_sum(input_value):
+>       assert input_value == 10
+E       assert 20 == 10
+
+tests\fixture_test.py:10: AssertionError
+__________________________________________________________________________________ testcompare2float __________________________________________________________________________________
+
+    @pytest.mark.testing1
+    def testcompare2float():
+        a = 10.5
+        b  = 5.5
+>       assert a==b
+E       assert 10.5 == 5.5
+
+tests\marker_test.py:20: AssertionError
+_______________________________________________________________________________ testcomparesubtraction ________________________________________________________________________________
+
+    @pytest.mark.activity
+    def testcomparesubtraction():
+        a = 5
+        b = 10
+>       assert b-a == 3
+E       assert (10 - 5) == 3
+
+tests\marker_test.py:32: AssertionError
+================================================================================== warnings summary ===================================================================================
+activities\Activity22_test.py:16
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\activities\Activity22_test.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.activity1 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity1
+
+activities\Activity22_test.py:23
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\activities\Activity22_test.py:23: PytestUnknownMarkWarning: Unknown pytest.mark.activity1 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity1
+
+tests\marker_test.py:4
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:4: PytestUnknownMarkWarning: Unknown pytest.mark.testing - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.testing
+
+tests\marker_test.py:10
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:10: PytestUnknownMarkWarning: Unknown pytest.mark.testing - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.testing
+
+tests\marker_test.py:16
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.testing1 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.testing1
+
+tests\marker_test.py:22
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:22: PytestUnknownMarkWarning: Unknown pytest.mark.activity - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity
+
+tests\marker_test.py:28
+  C:\Users\0028TL744\IdeaProjects\FST_PYTHON\tests\marker_test.py:28: PytestUnknownMarkWarning: Unknown pytest.mark.activity - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.activity
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================================================================== short test summary info ===============================================================================
+FAILED tests/calculator_test.py::testsubtraction - assert (10 - 5) == 2
+FAILED tests/first_test.py::testsquare - assert (7 * 7) == 40
+FAILED tests/first_test.py::testequality - assert 10 == 11
+FAILED tests/fixture_test.py::test_sum - assert 20 == 10
+FAILED tests/marker_test.py::testcompare2float - assert 10.5 == 5.5
+FAILED tests/marker_test.py::testcomparesubtraction - assert (10 - 5) == 3
+====================================================================== 6 failed, 25 passed, 7 warnings in 0.18s =======================================================================
+PS C:\Users\0028TL744\IdeaProjects\FST_PYTHON>
